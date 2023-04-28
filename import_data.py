@@ -16,8 +16,8 @@ mycursor.execute("CREATE DATABASE IF NOT EXISTS THEOFFICE")
 
 #Create the table for the csv data (if not exists)
 mycursor.execute("""
-  CREATE TABLE IF NOT EXISTS THEOFFICE.EPISODES(
-    index VARCHAR(30) NOT NULL,
+  CREATE TABLE IF NOT EXISTS THEOFFICE.EPISODES (
+    index INTEGER primary key,
     number_of_seasons INTEGER,
     title_of_the_episode VARCHAR(30),
     description_of_the_episode VARCHAR(30),
@@ -31,7 +31,7 @@ mycursor.execute("DELETE FROM THEOFFICE.EPISODES")
 mydb.commit()
 
 #Read data from a csv file
-clash_data = pd.read_csv('./cr-unit-attributes.csv', index_col=False, delimiter = ',')
+clash_data = pd.read_csv('./the_office_series.csv', index_col=False, delimiter = ',')
 clash_data = clash_data.fillna('Null')
 print(clash_data.head(20))
 
