@@ -18,3 +18,4 @@ def unitList():
     mycursor.execute("SELECT * FROM EPISODES")
     myresult = mycursor.fetchall()
     return render_template('episodes.html', units=myresult)
+

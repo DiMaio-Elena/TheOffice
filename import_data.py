@@ -14,17 +14,24 @@ print("ciao")
 #Create the DB (if not already exists)
 mycursor.execute("CREATE DATABASE IF NOT EXISTS THEOFFICE")
 
-#Create the table for the csv data (if not exists)
-mycursor.execute("""
-  CREATE TABLE IF NOT EXISTS THEOFFICE.EPISODES (
-    index INTEGER primary key,
+mycursor.execute("DROP TABLE IF EXISTS THEOFFICE.EPISODES")
+
+#Create the table for the csv data of the office episodes(if not exists)
+mycursor.execute(""" CREATE TABLE IF NOT EXISTS THEOFFICE.EPISODES (
+    id INTEGER PRIMARY KEY,
     number_of_seasons INTEGER,
-    title_of_the_episode VARCHAR(30),
-    description_of_the_episode VARCHAR(30),
+    title_of_the_episode VARCHAR(300),
+    description_episode VARCHAR(300),
     ratings_given_to_the_episode VARCHAR(30),
-    duration_of_the_episode INTEGER(30),
-    date_on_which_the_episode_was_released VARCHAR(30)
-  );""")
+    duration_of_the_episode INTEGER,
+    date_on_which_the_episode_was_released VARCHAR(30),
+    director VARCHAR(30)
+  )""")
+
+
+
+
+
 
 #Delete data from the table Clsh_Unit
 mycursor.execute("DELETE FROM THEOFFICE.EPISODES")
@@ -39,7 +46,7 @@ print(clash_data.head(20))
 for i,row in clash_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO EPISODES VALUES (%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO THEOFFICE.EPISODES (id, number_of_seasons, title_of_the_episode, description_episode, ratings_given_to_the_episode, duration_of_the_episode, date_on_which_the_episode_was_released,director) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes

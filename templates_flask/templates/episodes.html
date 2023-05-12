@@ -5,9 +5,27 @@
 </head>
 <body>
     <h1>EPISODES</h1>
+  
+
+   
     {% for item in units %}
-      <p>{{ item }}</p>
+        <p>
+          <o>l
+            Stagione: {{item[1]}}
+            Titolo Episodio: {{item [2]}}
+            Trama: {{item [3]}}
+            Durata: {{item[5]}}
+            Data: {{item [6]}}
+            Stelle: {{item[4]}}
+            
+          </ol>
+            
+
+            
+        </p>
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
     {% endfor %}
+
 
 </body>
 </html>
