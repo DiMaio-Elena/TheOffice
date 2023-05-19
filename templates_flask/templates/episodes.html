@@ -6,34 +6,31 @@
 </head>
 
 <body>
-    <h1>the office</h1>
-    <img src="../static/22.png" height="500px"/>
+
+    <section class="center_box">
+      <img src="../static/tittolo2.png" height="100px"/>
+    </section>
+    
    
     {% for item in units %}
         <p>
-          <o>
+        <section id="overlay">
+
+          <p > Stagione: {{item[1]}} </p>
+          <p> Titolo Episodio: {{item [2]}}</p>
+          <p>  Trama: {{item [3]}}</p>
+          <p> Durata: {{item[5]}}</p>
+          <p> Data: {{item [6]}}</p>
+          <p> Stelle: {{item[4]}}</p>
+            
+          <p>Personaggio: {{item[9]}}</p>
+          <p>Citazione: {{item[10]}}</p>
+          <p>Numero_episodio: {{item[12]}}</p>
           
-            Stagione: {{item[1]}}
-            Titolo Episodio: {{item [2]}}
-            Trama: {{item [3]}}
-            Durata: {{item[5]}}
-            Data: {{item [6]}}
-            Stelle: {{item[4]}}
-            
-            Personaggio {{item[9]}}
-            Citazione {{item[10]}}
-            Stagione {{item[11]}}
-            Numero_episodio {{item[12]}}
-
-
-    
-
-          </ol>
-            
-
+        </section>
             
         </p>
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+        <img id="myImage" src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" class="grandezza">
     {% endfor %}
 
 
