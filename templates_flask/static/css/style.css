@@ -1,0 +1,17 @@
+body{
+    background-image: linear-gradient(to top left, rgba(38, 40, 42, 0.904), rgba(0, 0, 0, 0.1));
+    
+}
+h1{
+
+    font-family:, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 6rem;
+}
+
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+  

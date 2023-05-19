@@ -15,7 +15,10 @@ mydb = mysql.connector.connect(
 mycursor=mydb.cursor()
 @app.route ('/')
 def unitList():
-    mycursor.execute("SELECT * FROM EPISODES")
+    mycursor.execute("SELECT * FROM EPISODES,CITAZIONI WHERE id = id_puntata")
     myresult = mycursor.fetchall()
     return render_template('episodes.html', units=myresult)
+
+   
+ 
 
