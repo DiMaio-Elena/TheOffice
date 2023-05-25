@@ -8,37 +8,40 @@
 <body>
 
     <section class="center_box">
-      <img src="../static/tittolo2.png" height="100px"/>
+      <a href="https://www.imdb.com/title/tt0386676/"  target="_blank">  <img src="../static/tittolo2.png" height="100px"/>  </a>
     </section>
     
-   
-    {% for item in units %}
-        <p>
-        
-      <section id="tutto">
-        <section id="overlay" >
-      
+   <a href="Stagione1.html" target="_blank"> Stagione 1 </a>
+
+
+   <div class="container">
+      {% for item in units %}
+
+      <div id="tutto" >
+        <div id="overlay" class="grandezza" >
+          
             Stagione: {{item[1]}} 
-          <p > Titolo Episodio: {{item [2]}}</p>
-          <p> Trama: {{item [3]}}</p>
-          <p> Durata: {{item[5]}}</p>
-          <p> Data: {{item [6]}}</p>
-          <p> Stelle: {{item[4]}}</p>
-            
+            Titolo Episodio: {{item [2]}}
+            Trama: {{item [3]}}
+            Durata: {{item[5]}}
+            Data: {{item [6]}}
+            Stelle: {{item[4]}}
+         
+
           <p>Personaggio: {{item[9]}}</p>
           <p>Citazione: {{item[10]}}</p>
           <p>Numero_episodio: {{item[12]}}</p>
 
-        </section>
+        </div>
 
-        <section>
-          <img id="myImage" src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" class="grandezza">
-        </section>
+        <div >
+          <img class="grandezza" src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" >
+        </div>
      
-      </section>
+      </div>
 
     {% endfor %}
-
+  </div>
 
 </body>
 </html>

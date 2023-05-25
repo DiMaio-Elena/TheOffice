@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to top left, rgba(38, 40, 42, 0.904), rgba(0, 103, 248, 0.46));
+    background-image: linear-gradient(to top left, rgba(38, 40, 42, 0.904), rgba(108, 146, 201, 0.46));
     
 }
 
@@ -12,48 +12,47 @@ body{
 
 .grandezza{
     width: 700px;
+    height: 400px;
     border: 5px solid black;
-   
-   
 }
-
-
+.container{
+  display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    gap: 11px;
+}
+    
+  
 
 #tutto{
   position:relative;
- /* Imposta la larghezza appropriata */
+  
   
 }
 
 #overlay {
+  
   overflow: scroll;
-  position:absolute;
+  
   top: 0;
-  left: 0;
-  width: 750px;
+  left: 100;
+  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Colore di sfondo traslucido */
-  color: white;
+  background-color: rgba(241, 240, 240, 0.8); /* Colore di sfondo traslucido */
+  color: rgb(2, 2, 2);
   font-size: 24px;
   text-align: center;
   padding-top: 8px; /* Imposta il padding superiore appropriato per centrare il testo */
   padding-bottom: 0px;
   opacity: 0; /* Imposta l'opacità iniziale a 0 per nascondere l'overlay */
   transition: opacity 1s ease; /* Aggiungi una transizione di 0.5 secondi per l'effetto di dissolvenza */
+  position:absolute;
 }
-  
-  #myImage {
-    transition: transform 0.5s ease; /* Aggiungi una transizione di 0.5 secondi per l'effetto di rotazione */
-    width: 700px;
-  }
-
-  #myImage.rotate {
-    transform: rotateY(180deg); /* Ruota l'immagine di 180 gradi sull'asse Y */
-  }
   
   
   #tutto:hover #overlay {
-    opacity: 11; /* Mostra l'overlay al passaggio del mouse sul contenitore */
+    opacity: 1; /* Mostra l'overlay al passaggio del mouse sul contenitore */
   }
 
-  
+
