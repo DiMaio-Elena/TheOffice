@@ -21,9 +21,9 @@ def unitList():
 
 @app.route ('/Stagione1')
 def Stagione1():
-    mycursor.execute("SELECT * FROM EPISODES,CITAZIONI WHERE id = id_puntata, number_of_seasons=1")
+    mycursor.execute("SELECT * FROM EPISODES,CITAZIONI WHERE id = id_puntata AND number_of_seasons=1 ")
     myresult1 = mycursor.fetchall()
-    return render_template('Stagione1.html', units=myresult1)
+    return render_template('Stagione1.html', myresult1=myresult1)
 
    
  
