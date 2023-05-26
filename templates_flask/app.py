@@ -25,6 +25,11 @@ def Stagione1():
     myresult1 = mycursor.fetchall()
     return render_template('Stagione1.html', myresult1=myresult1)
 
+@app.route ('/Stagione2')
+def Stagione2():
+    mycursor.execute("SELECT * FROM EPISODES,CITAZIONI WHERE id = id_puntata AND number_of_seasons=2 ")
+    myresult2 = mycursor.fetchall()
+    return render_template('Stagione2.html', myresult2=myresult2)
    
  
 

@@ -10,38 +10,19 @@
     <section class="center_box">
       <a href="https://www.imdb.com/title/tt0386676/"  target="_blank">  <img src="../static/tittolo2.png" height="100px"/>  </a>
     </section>
-    
-   <a href="https://5000-dimaioelena-theoffice-ku75knc4tf7.ws-eu98.gitpod.io/Stagione1" target="_blank"> Stagione 1 </a>
+   
 
+  <ul class="navbar">    
+  
 
-   <div class="container">
-      {% for item in units %}
+   <li class="navbar-item"> <a href="/Stagione1" target="_blank"> Stagione 1 </a>  </li>
+   <li class="navbar-item"> <a href="/Stagione2" target="_blank"> Stagione 2 </a> </li>
+ 
+ 
+   </ul>
+   <img src="../static/The-Office.jpeg" class="center_box1"/>
+   
 
-      <div id="tutto" >
-        <div id="overlay" class="grandezza" >
-          
-            Stagione: {{item[1]}} 
-            Titolo Episodio: {{item [2]}}
-            Trama: {{item [3]}}
-            Durata: {{item[5]}}
-            Data: {{item [6]}}
-            Stelle: {{item[4]}}
-         
-
-          <p>Personaggio: {{item[9]}}</p>
-          <p>Citazione: {{item[10]}}</p>
-          <p>Numero_episodio: {{item[12]}}</p>
-
-        </div>
-
-        <div >
-          <img class="grandezza" src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" >
-        </div>
-     
-      </div>
-
-    {% endfor %}
-  </div>
 
 </body>
 </html>
